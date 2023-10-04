@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=document.getElementById("scene");new Parallax(e)});

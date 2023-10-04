@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Neue Machina;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 100%;
+    transform: scale(0, 0);
+    content: "";
+    transition: 0.3s;
+    background-color: white;
+}
+
+li {
+    list-style: none;
+}
+
+body, html {
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.main-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: linear-gradient(180deg, rgba(31, 18, 58, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+    min-height: 200px;
+    top: 0;
+    left: 0;
+    padding-top: 32px;
+    padding-right: 32px;
+}
+
+.main-header__nav {
+    margin: 0 auto;
+}
+
+.main-header .main-header__achievements {
+    position: absolute;
+    right: 32px;
+}
+
+.nav-menu {
+    max-width: 705px;
+    width: 100%;
+}
+
+.nav-menu__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-menu a {
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.nav-menu a.active {
+    background: radial-gradient(117.03% 369.14% at 2.65% 100%, #8B58F0 2.37%, #D690D6 58.57%, #E8E8FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav-menu a:hover:not(.active)::after {
+    transform: scale(1, 1);
+}
+
+.achievements {
+    display: flex;
+    gap: 27px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 19.3px;
+    text-align: right;
+}
+
+.achievements a {
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.achievements a:hover::after {
+    transform: scale(1, 1);
+}
+
+main {
+    height: 100%;
+}
+
+.preview {
+    overflow: hidden;
+    height: 100%;
+}
+
+.preview .scene {
+    position: relative;
+    overflow: hidden;
+    height: 105%;
+    width: 105vw;
+    top: -15px;
+    left: -40px;
+}
+
+.preview .scene__layer {
+    min-width: 100vw;
+    height: 100%;
+}
+
+.preview .scene__layer:nth-of-type(1) .background {
+    background: url(../images/bg.jpg) no-repeat 0% 10%;
+    background-size: cover;
+    position: absolute;
+    top: -10px;
+    width: 110%;
+    height: 100%;
+    animation: alternate wave 6s infinite ease-in-out;
+}
+
+.preview .scene__layer:nth-of-type(2) .background {
+    background: url(../images/stars.png) repeat-x 0% 100%;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 105%;
+}
+
+.preview .scene__layer:nth-of-type(3) .background {
+    background: url(../images/Layer-0.png) repeat-x 0% 100%;
+    background-size: contain;
+    top: 0;
+    bottom: -200px;
+    position: absolute;
+    width: 105%;
+}
+
+.preview .scene__layer:nth-of-type(4) .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.preview .scene__layer:nth-of-type(4) .background img {
+    position: relative;
+    top: -40px;
+}
+
+.preview .scene__layer:nth-of-type(5) .background {
+    background: url(../images/Layer-1.png) repeat-x 100% 30%;
+    background-size: contain;
+    top: 0;
+    bottom: -450px;
+    position: absolute;
+    width: 105%;
+}
+
+.preview .scene__layer:nth-of-type(6) .background {
+    background: url(../images/Layer-2.png) repeat-x 0% 60%;
+    background-size: contain;
+    top: 0;
+    bottom: -600px;
+    position: absolute;
+    width: 105%;
+}
+
+.preview .scene__layer:nth-of-type(2) .background {
+    animation: alternate wave 3s infinite ease-in-out;
+    animation-delay: 1s;
+}
+
+.preview .scene__layer:nth-of-type(3) .background {
+    animation: alternate wave 3s infinite ease-in-out;
+    animation-delay: 1.5s;
+}
+
+.preview .scene__layer:nth-of-type(4) .background {
+    animation: alternate wave 3s infinite ease-in-out;
+    animation-delay: 2s;
+}
+
+.preview .scene__layer:nth-of-type(5) .background {
+    animation: alternate wave 3s infinite ease-in-out;
+    animation-delay: 2.5s;
+}
+
+.preview .scene__layer:nth-of-type(6) .background {
+    animation: alternate wave 3s infinite ease-in-out;
+    animation-delay: 3s;
+}
+
+.preview__body {
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: 800px;
+    top: auto !important;
+    bottom: 60px;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    font-size: 30px;
+    line-height: 28.95px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: -0.015em;
+    padding: 52px 11px 0 11px;
+}
+
+.preview__body::after, .preview__body::before {
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 32px;
+    border-top: 2px solid white;
+    z-index: 6;
+    top: 0;
+}
+
+.preview__body::after {
+    border-left: 2px solid white;
+    left: 0;
+}
+
+.preview__body::before {
+    border-right: 2px solid white;
+    right: 0;
+}
+
+.preview__body svg {
+    margin-top: 20px;
+}
+
+.preview__text {
+    margin-bottom: 20px;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateY(1.5%);
+    }
+}
