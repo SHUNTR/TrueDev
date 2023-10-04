@@ -29,6 +29,7 @@ li {
 
 body, html {
     height: 100%;
+    background-color: black;
 }
 
 ::-webkit-scrollbar {
@@ -148,10 +149,10 @@ main {
 }
 
 .preview .scene__layer:nth-of-type(3) .background {
-    background: url(../images/Layer-0.png) repeat-x 0% 100%;
+    background: url(../images/Layer-0.webp) repeat-x 0% 100%;
     background-size: contain;
     top: 0;
-    bottom: -200px;
+    bottom: -100px;
     position: absolute;
     width: 105%;
 }
@@ -170,19 +171,19 @@ main {
 }
 
 .preview .scene__layer:nth-of-type(5) .background {
-    background: url(../images/Layer-1.png) repeat-x 100% 30%;
+    background: url(../images/Layer-1.webp) repeat-x 100% 30%;
     background-size: contain;
     top: 0;
-    bottom: -450px;
+    bottom: -350px;
     position: absolute;
     width: 105%;
 }
 
 .preview .scene__layer:nth-of-type(6) .background {
-    background: url(../images/Layer-2.png) repeat-x 0% 60%;
+    background: url(../images/Layer-2.webp) repeat-x 0% 60%;
     background-size: contain;
     top: 0;
-    bottom: -600px;
+    bottom: -530px;
     position: absolute;
     width: 105%;
 }
